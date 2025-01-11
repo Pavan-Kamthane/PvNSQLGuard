@@ -120,7 +120,6 @@ When you run the tool, the splash screen displays the following:
 - Version: 1.0
 - LinkedIn: [Pavan Kamthane](https://www.linkedin.com/in/pavankamthane/)
 - GitHub: [PvNSQLGuard](https://github.com/Pavan-Kamthane/PvNSQLGuard)
-- Contact: Pavan.Kamthane@studentambassadors.com
 
 ## License
 
