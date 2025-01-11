@@ -1,64 +1,62 @@
+```markdown
+# PvNSQLGuard
 
-# PvNSQLGuard - SQL Injection Scanner
-
-**Developer:** Pavan Kamthane  
-**Version:** 1.0  
-**LinkedIn:** [Pavan Kamthane](https://www.linkedin.com/in/pavankamthane/)  
-**GitHub:** [PavanBoss](https://github.com/PavanBoss)  
-
----
-
-## Introduction
-
-PvNSQLGuard is a simple Python tool designed to help detect SQL injection vulnerabilities in web applications. It scans URLs and their query parameters to check if they are vulnerable to SQL injection attacks by testing common payloads.
-
-This tool is ideal for penetration testers and developers who want to quickly test their websites or applications for SQL injection vulnerabilities.
-
----
+PvNSQLGuard is a simple yet effective tool designed to detect SQL injection vulnerabilities in web applications. It scans a given URL for query parameters and tests them with common SQL injection payloads to check for vulnerabilities.
 
 ## Features
 
-- **Automatic detection of query parameters** in the provided URL.
-- **Payload-based testing** for SQL injection on detected parameters.
-- **Clear output** showing whether a vulnerability is detected or not.
-
----
+- Scans URLs for query parameters
+- Tests parameters with SQL injection payloads
+- Displays the result as either "Vulnerable" or "Safe"
+- Easy to use with color-coded output for better readability
 
 ## Requirements
-
-To run this tool, you need the following dependencies installed:
 
 - Python 3.x
 - `requests` library
 - `pyfiglet` library
 - `colorama` library
 
-You can install these dependencies using pip:
+## Installation
 
-```bash
-pip install requests pyfiglet colorama
-```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Pavan-Kamthane/PvNSQLGuard.git
+    ```
+   
+2. Navigate into the project directory:
+    ```bash
+    cd PvNSQLGuard
+    ```
 
----
+3. Install the required libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## How to Use
+4. Download the `payloads.txt` file from the repository or create your own payload file.
 
-1. **Clone the repository** or download the Python file `PvNSQLGuard.py`.
-2. Make sure you have the payloads file (`payloads.txt`) in the same directory as the script. You can find various SQL injection payloads online or create your own.
-3. Run the script:
+## Usage
 
-```bash
-python PvNSQLGuard.py
-```
+1. Run the tool:
+    ```bash
+    python PvNSQLGuard.py
+    ```
 
-4. **Provide the target URL** when prompted. The tool will ask if the URL contains query parameters. If you're unsure, you can type `IDK` to automatically scan for query parameters.
+2. Enter the target URL when prompted. Example:
+    ```text
+    http://example.com/search.php?query=test
+    ```
 
----
+3. Indicate whether the URL has query parameters by typing `yes`, `no`, or `IDK` (I don't know).
+
+4. If you chose `IDK`, the tool will automatically detect query parameters and perform the SQL injection test.
+
+5. The tool will provide feedback if any vulnerabilities are detected.
 
 ## Example
 
-### Example 1: URL with known query parameters
-```
+```bash
 Enter target URL: http://testphp.vulnweb.com/search.php?test=query
 Does this URL have query parameters? (yes/no) or 'IDK': IDK
 Scanning URL for query parameters...
@@ -67,39 +65,13 @@ Starting SQL injection test on detected parameters...
 [Vulnerable] SQL Injection detected on http://testphp.vulnweb.com/search.php?test=query with parameter: test
 ```
 
-### Example 2: URL without query parameters
-```
-Enter target URL: http://example.com
-Does this URL have query parameters? (yes/no) or 'IDK': IDK
-Scanning URL for query parameters...
-No query parameters found.
-```
+## Contact
 
----
-
-## Workflow
-
-1. **Input URL:** The user is prompted to enter the target URL for scanning.
-2. **Query Parameters Detection:** If the user does not know whether the URL contains query parameters, the tool will automatically check for them.
-3. **SQL Injection Test:** Once parameters are detected, the tool tests them with various SQL injection payloads.
-4. **Output:** The result will indicate whether the URL is vulnerable or safe based on the response received.
-
----
-
-## Customizing Payloads
-
-You can customize the payloads used by the scanner by editing the `payloads.txt` file. Each line in the file should contain a different SQL injection payload.
-
----
+- Developer: Pavan Kamthane
+- LinkedIn: [https://www.linkedin.com/in/pavankamthane/](https://www.linkedin.com/in/pavankamthane/)
+- GitHub: [https://github.com/Pavan-Kamthane/PvNSQLGuard](https://github.com/Pavan-Kamthane/PvNSQLGuard)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- The SQL injection payloads used in this tool are taken from publicly available resources for testing purposes.
-- Special thanks to the open-source community for their contributions.
-
+This project is open source and available under the MIT License. See the LICENSE file for more information.
+```

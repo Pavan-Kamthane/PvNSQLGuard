@@ -13,7 +13,7 @@ def display_splash_screen():
     print(Fore.CYAN + ascii_art)
     print(Fore.YELLOW + "Developer: Pavan Kamthane")
     print(Fore.GREEN + "LinkedIn: https://www.linkedin.com/in/pavankamthane/")
-    print(Fore.GREEN + "GitHub: https://github.com/PavanBoss")
+    print(Fore.GREEN + "GitHub: https://github.com/Pavan-Kamthane/PvNSQLGuard")
     print(Fore.GREEN + "\nInitializing SQL Injection scanner...\n")
     
     # Basic definition of PvNSQLGuard
