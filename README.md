@@ -1,4 +1,4 @@
-```markdown
+
 # PvNSQLGuard
 
 PvNSQLGuard is a simple yet effective tool designed to detect SQL injection vulnerabilities in web applications. It scans a given URL for query parameters and tests them with common SQL injection payloads to check for vulnerabilities.
@@ -74,4 +74,3 @@ Starting SQL injection test on detected parameters...
 ## License
 
 This project is open source and available under the MIT License. See the LICENSE file for more information.
-```
